@@ -1,0 +1,57 @@
+<div class="table-container">
+  <h1 class="table-title">Lista de Pacientes</h1>
+
+  <h2 class="table-subtitle">Mujeres</h2>
+    
+    <div class="table-wrapper">
+        <table>
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>ID</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each genderUser.[0]}}
+            <tr>
+                <td>{{this.firstName}}</td>
+                <td>{{this.lastName}}</td>
+                <td>{{this.date}}</td>
+                <td>{{this.time}}</td>
+                <td>{{this.id}}</td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+  <h2 class="table-subtitle">Hombres</h2>
+    
+  <div class="table-wrapper">
+    <table>
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>ID</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each genderUser.[1]}}
+        <tr>
+            <td>{{this.firstName}}</td>
+            <td>{{this.lastName}}</td>
+            <td>{{this.date}}</td>
+            <td>{{this.time}}</td>
+            <td>{{this.id}}</td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+  </div>
+</div>

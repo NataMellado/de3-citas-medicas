@@ -1,0 +1,282 @@
+@import url('/css/variables.css');
+
+
+
+
+
+/* RESET */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+/* GLOBAL */
+body {
+    background-color: var(--clr-snd);
+}
+
+.main-container {
+    width: 100%;
+    padding: 2rem;
+}
+h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font: weight 600;
+}
+
+h2 {
+    font-size: clamp(1.2rem, 5vw, 1.2rem);
+    font: weight 600;
+}
+
+
+
+
+
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--clr-pr);
+}
+
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+
+}
+
+.navbar-toggler-icon {
+    color: var(--clr-white)!important;
+}
+
+.fas {
+    display: none;
+}
+
+@media screen and (min-width: 1000px){
+    body {
+      display: flex;
+    }
+
+    .main-container {
+        padding: 3rem 10rem 0rem 10rem; 
+    }
+
+    .navbar {
+        flex-direction: column;             
+        min-height: 100vh; 
+        width: 350px;     
+    }
+
+    .container-fluid {
+        padding-top: 3rem;
+        display: grid!important;
+        justify-content: center!important;
+        width: 100%;
+        gap: 4rem;
+    }
+
+    ul {
+        display: grid!important;      
+    }
+   
+    .navbar-nav {   
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    a {
+        padding: 1;
+        margin: 0!important;
+    }
+
+    .navbar-brand {
+        font-size: 1.7rem;
+    }
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 1rem; 
+        font-size: 1.1rem; 
+        transition: background-color 0.3s;
+    }
+
+    .nav-link.active {
+        border: 1px solid var(--clr-white);
+        border-radius: 1rem;
+    }
+
+    .navbar-collapse {
+        justify-content: flex-start;  
+    }
+
+    .fas {
+        display: block;
+    }
+}
+
+
+
+
+
+/* HOME */
+.profile-container {
+    display: grid;  
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    background: var(--clr-white);
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-inline: auto;
+}
+
+.profile-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.profile-description {
+    color: var(--clr-grey);
+}
+
+
+
+
+
+/* PACIENTE NUEVO */
+.patient-data {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+}
+
+.btn-ingresar {
+    background-color: var(--clr-pr);
+    color: var(--clr-white);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    max-width: 8rem;
+    width: 100%;
+    font-size: clamp(0.8rem, 5vw, 1.2rem);
+    font-weight: 700;
+}
+
+.btn-ingresar:hover {
+    background-color: transparent;
+    border: 1px solid var(--clr-pr);
+    color: var(--clr-pr);
+}
+
+.btn-ingresar:active {
+    transform: scale(0.95);
+}
+
+.row-container {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.form-subtitle {
+    margin-bottom: 2rem;
+}
+   
+.patient-data label {
+    max-width: 5rem;
+    width: 100%;
+    background-color: var(--clr-white);
+    min-height: 3rem;
+    border-radius: 1rem 0rem 0rem 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.7rem;
+    background-color: var(--clr-trd);
+}
+
+.patient-data input {
+    border: none;
+    min-height: 3rem;
+    width: 100%;
+    padding-left: 0.7rem;
+    border-radius: 0rem 1rem 1rem 0rem;
+}
+
+
+
+
+
+/* LISTA DE PACIENTES */
+.table-wrapper {
+    overflow-x: auto;  
+}
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+
+table td {
+    background-color: white; 
+    padding: 0.5rem 1.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.table-container {
+    margin-bottom: 3rem;
+}
+
+table th {
+    background-color: var(--clr-trd);
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+}
+
+.table-title {
+    margin-top: 2rem;
+}
+
+.table-subtitle {
+    margin-top: 3rem;
+}
+
+

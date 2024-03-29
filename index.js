@@ -1,14 +1,11 @@
-const express = require('express');
-const app = express();
+import express from 'express';
+import app from './app.js';
+import router from './routes/routes.js';
 const port = 3000;
-const router = require('./routes/routes');
 
-// Static
+// Configura las rutas antes de iniciar el servidorapp.use(express.static('public'));
 app.use(express.static('public'));
-
-// routes 
 app.use('/', router);
-
 
 // Configuración del servidor
 app.listen(port, () => {

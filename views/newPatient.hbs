@@ -1,0 +1,44 @@
+<form action="/newPatient" method="POST" id="newPatientForm">
+
+  <div class="form-header">
+    <h1 class="form-title">Paciente en lista de espera</h1>
+    <button class="btn-ingresar" type="submit">Ingresar</button>
+  </div>
+
+  <h2 class="form-subtitle">Paciente ingresado:</h2>
+
+  <div class="patient-data">
+
+    <div class="row-container">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" value="{{nombre}}" />
+    </div>
+
+    <div class="row-container">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" value="{{apellido}}" />
+    </div>
+
+    <div class="row-container">
+        <label for="genero">Género</label>
+        <input type="text" id="genero" name="genero" value="{{genero}}" />
+    </div>
+
+    <div class="row-container">
+         <label for="fecha">Fecha</label>
+        <input type="text" id="fecha" name="fecha" value="{{fecha}}" />
+    </div>
+       
+    <div class="row-container">
+         <label for="fecha">Hora</label>
+        <input type="text" id="fecha" name="fecha" value="{{hora}}" />
+    </div>
+
+    <div class="row-container">
+        <label for="id">ID</label>
+        <input type="text" id="id" name="id" value="{{id}}" />
+    </div>
+  </div>
+
+ 
+</form>
