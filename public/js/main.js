@@ -14,16 +14,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Funcion para obtener un paciente aleatorio y mostrarlo en el formulario
-document.getElementById('verPaciente').addEventListener('click', async () => {
-    try {
-        const response = await axios.get('/getRandomUser');
-        const data = response.data;
-
-        document.getElementById('nombre').value = data.firstName;
-        document.getElementById('apellido').value = data.lastName;
-        document.getElementById('genero').value = data.gender;
-    } catch (error) {
-        console.error(error);
-    }
-});
